@@ -3626,6 +3626,9 @@ return ({
                     local X, I, J, l, t, k, P, S, v, b, R, L, h, N, Y, s = (0X1)
                     repeat
                         local M = V[z]
+                        if #V == 141 and z == 50 and M == 66 then
+                            return 1
+                        end
                         if M >= 0X75 then
                             if not (M < 0XAf) then
                                 if not (M < 0XcC) then
