@@ -2245,9 +2245,6 @@ return ({
                                 end
                                 ;(a[0x16])(B, e, G)
                                 e += 0X4
-                                if e % 80000 == 0 and task then
-                                    task.wait()
-                                end
                             end
                             return B
                         end)
@@ -3626,7 +3623,6 @@ return ({
             if C == 0X1 then
                 T = function (...)
                     local C, c, A, z, Q, i, u = U[8](e), 0, 0x1, 1, (U[0X4]())
-                    local _yieldN = 0
                     local X, I, J, l, t, k, P, S, v, b, R, L, h, N, Y, s = (0X1)
                     repeat
                         local M = V[z]
@@ -5721,13 +5717,6 @@ return ({
                             end
                         end
                         z += 0X1
-                        _yieldN += 1
-                        if _yieldN >= 5000 then
-                            _yieldN = 0
-                            if task then
-                                task.wait()
-                            end
-                        end
                     until
                     false
                 end
@@ -5737,7 +5726,6 @@ return ({
                     local C, e, c, A
                     local z
                     local Q = (0X1)
-                    local _yieldN = 0
                     repeat
                         local i = (V[Q])
                         if i < 0X3 then
@@ -5889,13 +5877,6 @@ return ({
                             end
                         end
                         Q += 0x1
-                        _yieldN += 1
-                        if _yieldN >= 5000 then
-                            _yieldN = 0
-                            if task then
-                                task.wait()
-                            end
-                        end
                     until
                     false
                 end)
